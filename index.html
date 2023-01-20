@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h4>Content</h4>
+      </div>
+
+      <ul>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">ABOUT</a>
+          <div class="dropdown">
+            <a href="#">HISTORY</a>
+            <a href="#">VISION MISION</a>
+          </div>
+        </li>
+        <li><a href="#">OUR WORK</a></li>
+        <li><a href="#">OUR TEAM</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+
+      <div class="menu-togle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- home section -->
+    <div class="slides">
+      <div class="slide">
+        <img src="images/bg.jpg" alt="">
+        <!-- <div class="content">
+          THIS IS PLACE WHERE TECHNOLOGI & CREATIVITY FUSED INTO DIGITAL CHEMISTRY
+        </div> -->
+      </div>
+      <div class="slide">
+        <img src="Images/about-bg.jpg" alt="">
+      </div>
+      <div class="navigation">
+        <a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+        <a class = "next" onclick = "plusSlides(-1)">&#10095;</a>
+      </div>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        if (n > slides.length)
+        {
+          slideIndex = 1;
+        }
+        if (n < 1)
+        {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++)
+        {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+      }
+    </script>
+
+    <!-- caregory <section></section> -->
+    <div class="heading">OUR VALUES</div>
+    <div class="flex-box">
+     <div class="kotak-1">
+      <div class="gambar">
+        <img src="images/lightbulb-o.png" alt="">
+      </div>
+      <div class="judul">INNOVATIVE
+        <ul>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga tempore distinctio totam iure voluptatibus, tenetur aliquam dolore a eligendi non saepe recusandae, quo nesciunt in id accusantium rerum consequuntur quisquam?</ul>
+      </div>
+     </div>
+     <div class="kotak-2">
+      <div class="gambar">
+        <img src="images/bank.png" alt="">
+      </div>
+      <div class="judul">LOYALITY
+        <ul>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga tempore distinctio totam iure voluptatibus, tenetur aliquam dolore a eligendi non saepe recusandae, quo nesciunt in id accusantium rerum consequuntur quisquam?</ul>
+      </div>
+     </div>
+     <div class="kotak-3">
+      <div class="gambar">
+        <img src="images/balance-scale.png" alt="">
+      </div>
+      <div class="judul">RESPECT
+        <ul>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga tempore distinctio totam iure voluptatibus, tenetur aliquam dolore a eligendi non saepe recusandae, quo nesciunt in id accusantium rerum consequuntur quisquam?</ul>
+      </div>
+     </div>
+    </div>
+
+    <!-- form section -->
+    <div class="input">CONTACT US
+    </div>
+    <form action="" class="contact-form">
+      <div class="contact-input">
+        <div class="name">Name</div>
+        <input type="text" placeholder="Name" class="contact_input">
+        <div class="name">Emile</div>
+        <input type="text" placeholder="Emile" class="contact_input">
+        <div class="name">Massage</div>
+        <textarea name="" placeholder="Massage" id="" cols="0" rows="10" class="contact_input"></textarea>
+        <input type="submit" value="SUBMIT" class="contact_buton">
+      </div>
+    </form>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="selesai">
+        Copyright 2016. PT Company
+      </div>
+      <div class="logo">
+        <div class="siji">
+          <img src="images/facebook-official.png" alt="">
+        </div>
+        <div class="loro">
+          <img src="images/twitter.png" alt="">
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
